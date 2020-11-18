@@ -1,0 +1,99 @@
+body {
+    background: #120458;
+    margin: 0;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff ;
+    font-size: 20px;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+p {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 20px !important;
+    padding-top: 0px;
+    margin: 0
+
+}
+button {
+    border-radius: 8px;
+    background: #ff124f;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    height: 56px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.imgDiv{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+.imgDiv img{
+    border-radius: 16px;
+
+}
+
+img {
+}
+
+header{
+    padding: 36px 40px;
+    background-color: #160739;
+}
+
+article{
+    padding-top: 25px;
+}
+
+.description{
+    margin: 20px;
+    background-color: #160739;
+    border-radius: 16px;
+}
+.videoModal{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h3 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 31px 23px 0px 23px;
+    margin: 0
+}
+
+@media (min-width: 1024px) {
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    button {
+        width: 15%;
+        margin-left: 0%
+    }
+    .description {
+        width: 15%;
+    }
+}
