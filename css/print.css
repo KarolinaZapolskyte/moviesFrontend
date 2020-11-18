@@ -10,4 +10,8 @@
     video {
         display: none
     }
+    
+    .videoModal{
+        display:none
+    }
 }
