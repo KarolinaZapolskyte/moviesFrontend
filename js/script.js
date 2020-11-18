@@ -1,3 +1,4 @@
+//declaring the movies in a JSON format
 const movies = [
     {"title": "Avengers: Age of Ultron", "youtubeId": "tmeOjFno6Do"},
     {"title": "Guardians of The Galaxy", "youtubeId": "d96cjJhvlMA"},
@@ -6,7 +7,7 @@ const movies = [
     {"title": "Annihilation", "youtubeId": "ufaDurSCKOk"},
     {"title": "Interstellar", "youtubeId": "zSWdZVtXT7E"}
 ]
-
+//function to get youtube URL from having the ID of the trailer
 let youtube = {
     getIdFromUrl: function (videoIdOrUrl) {
         if (videoIdOrUrl.indexOf('http') === 0) {
@@ -24,7 +25,7 @@ let youtube = {
         return 'https://www.youtube.com/embed/' + youtube.getIdFromUrl(videoIdOrUrl);
     }
 };
-
+//fetching the api data from omdb using movie title
 function showMovies() {
     movies.forEach(function(movie) 
     {
@@ -34,7 +35,8 @@ function showMovies() {
             })
             .then(data =>
                 {
-                    console.log(data);
+            //creating the DOM elements for the movies to be displayed and adding attributes to give them function and styling
+                    
                     const section = document.createElement('section');
                     const article = document.createElement('article');
                     const images = document.createElement('img');
@@ -68,12 +70,14 @@ function showMovies() {
                     plot.innerHTML = data.Plot;
                     ratingSource.innerHTML = data.Ratings[0].Source;
                     ratingValue.innerHTML = data.Ratings[0].Value;
-
+            
+                    // Calculate the age of the movie using current date and the movies release date
                     let today = new Date();
                     let currentYear = today.getFullYear();
 
                     age.innerHTML = currentYear - data.Year + " years old";
-
+                    
+                    // Creating DOM elements for the movie trailer
                     const videoDiv = document.createElement('div');
                     videoDiv.setAttribute('class', 'videoModal')
                     const video = document.createElement('iframe');
@@ -104,8 +108,10 @@ function showMovies() {
     
     ) 
 }
+// Running the function
 showMovies();
 
+// Function to display the proper trailer for the button clicked
 function buttonClick(clickId) {
    //document.getElementById('"'+clickId+'"').style.display = 'flex';
 clickId.style.display = "flex";
