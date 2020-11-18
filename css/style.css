@@ -81,7 +81,7 @@ h3 {
     padding: 31px 23px 0px 23px;
     margin: 0
 }
-
+// Making the content responsive
 @media (min-width: 1024px) {
     article {
         display: flex;
