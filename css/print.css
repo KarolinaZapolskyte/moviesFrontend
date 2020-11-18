@@ -2,7 +2,7 @@
     body {
         background: white;
     }
-    
+     // Hiding youtube trailer from print
     button {
         display: none
     }
@@ -10,7 +10,7 @@
     video {
         display: none
     }
-    
+
     .videoModal{
         display:none
     }
