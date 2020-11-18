@@ -28,7 +28,7 @@ let youtube = {
 function showMovies() {
     movies.forEach(function(movie) 
     {
-        fetch('http://www.omdbapi.com/?t=' + movie.title + '&apikey=789d41d5')
+        fetch('https://www.omdbapi.com/?t=' + movie.title + '&apikey=789d41d5')
             .then(response => {
                 return response.json();
             })
